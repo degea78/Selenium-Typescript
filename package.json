@@ -1,0 +1,37 @@
+{
+  "name": "fin-ui-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "webdriver-manager update && tsc",
+    "internal": "protractor ./config/internal.conf.js",
+    "finstack": "protractor ./config/finstack.conf.js --disableChecks",
+    "axon": "protractor ./config/axon.conf.js --disableChecks",
+    "incubator": "protractor ./config/incubator.conf.js --disableChecks",
+    "view_report": "xunit-viewer --results=./reports/xml --output=./reports/xml --watch --port=9090",
+    "users": "protractor ./config/users.conf.js",
+    "tsc": "tsc",
+    "tscw": "tsc -w",
+    "dev": "yarn tscw && yarn view_report"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.38",
+    "@types/node": "^7.0.0",
+    "color-cli": "^0.1.0",
+    "ejs": "^2.5.9",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "jasmine-protractor-matchers": "^1.0.1",
+    "jasmine-reporters": "^2.2.1",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine2-reporter": "^0.3.0",
+    "prettier": "^1.12.1",
+    "protractor": "^5.3.2",
+    "protractor-beautiful-reporter": "^1.2.1",
+    "protractor-element-extend": "^2.0.1",
+    "typescript": "^2.2.2",
+    "xunit-viewer": "^5.1.6"
+  },
+  "dependencies": {
+    "chromedriver": "^2.43.1"
+  }
+}
