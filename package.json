@@ -25,13 +25,16 @@
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine2-reporter": "^0.3.0",
     "prettier": "^1.12.1",
-    "protractor": "^5.3.2",
+    "protractor": "^5.4.2",
     "protractor-beautiful-reporter": "^1.2.1",
     "protractor-element-extend": "^2.0.1",
     "typescript": "^2.2.2",
     "xunit-viewer": "^5.1.6"
   },
   "dependencies": {
-    "chromedriver": "^2.43.1"
+    "chromedriver": "^2.43.1",
+    "selenium": "^2.20.0",
+    "webdriver": "^5.15.0",
+    "yarn": "^1.19.1"
   }
 }

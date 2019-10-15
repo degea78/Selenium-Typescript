@@ -18,11 +18,11 @@ if(headless)
 }
 */
 let config:Config = {
-  //baseUrl: 'http://www.google.ro',
+  baseUrl: 'https://www.amazon.co.uk/',
   specs:[
    
 
-   '../specs/primulTest.spec.js',   
+   '../specs/amazonBuy.spec.js',   
      
   ],
 
