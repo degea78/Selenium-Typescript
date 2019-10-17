@@ -1,13 +1,13 @@
 import amazonPO from "../po/amazonPo";
 import { browser, element, by, ExpectedConditions as EC } from "protractor";
+import { waitService } from "../helpers/wait-service";
 
 
 let amaPO = new amazonPO();
 
 describe('Amazon Buy Test', async () => {
     beforeAll(async () => {
-        browser.get('https://www.amazon.co.uk/');
-        
+        browser.get('https://www.amazon.co.uk/');        
     })
     describe('Amazon Test All tabs', async () => {
         describe("Today's deal tab", async () => {
@@ -29,7 +29,7 @@ describe('Amazon Buy Test', async () => {
         describe("Amazon Basics tab", async () => {
             beforeAll(async () => {
                 await amaPO.amazonBasicsTab.click();
-                //await browser.wait(EC.visibilityOf(amaPO.amazonBasicsHeader), 6000);
+                await waitService.waitForElementToBePresentVisibleClickable_Promise(amaPO.amazonBasicsHeader); 
             })
             it("Amazon Basics tab is correct", async () => {
                 expect(await amaPO.amazonBasicsHeader.getText()).toContain('AmazonBasics');                 
