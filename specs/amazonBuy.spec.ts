@@ -35,7 +35,33 @@ describe('Amazon Buy Test', async () => {
                 expect(await amaPO.amazonBasicsHeader.getText()).toContain('AmazonBasics');                 
             })
         })
-
+        describe("Gift Ideas tab", async () => {
+            beforeAll(async () => {
+                await amaPO.giftIdeas.click();
+                await waitService.waitForElementToBePresentVisibleClickable(amaPO.giftIdeasHeader); 
+            })
+            it("Gift Ideas tab is correct", async () => {
+                expect(await amaPO.giftIdeasHeader.getText()).toContain('Amazon Gift Ideas');                 
+            })
+        })
+        describe("New Releases tab", async () => {
+            beforeAll(async () => {
+                await amaPO.newReleases.click();
+                await waitService.waitForElementToBePresentVisibleClickable(amaPO.newReleasesHeader); 
+            })
+            it("New Releases tab is correct", async () => {
+                expect(await amaPO.newReleasesHeader.getText()).toContain('Amazon Hot New Releases');                 
+            })
+        })
+        describe("Gift Cards tab", async () => {
+            beforeAll(async () => {
+                await amaPO.giftCards.click();
+                await waitService.waitForElementToBePresentVisibleClickable(amaPO.giftCardsHeader); 
+            })
+            it("Gift Cards tab is correct", async () => {
+                expect(await amaPO.giftCardsHeader.getText()).toContain('Gift Cards & Top Up');                 
+            })
+        })
 
 
         it("All Tab's are correct", async () => {              
