@@ -1,6 +1,7 @@
 import amazonPO from "../po/amazonPo";
-import { browser, element, by, ExpectedConditions as EC } from "protractor";
+import { browser, element, by, ExpectedConditions as EC, protractor } from "protractor";
 import { waitService } from "../helpers/wait-service";
+import { async } from "q";
 
 
 let amaPO = new amazonPO();
@@ -62,12 +63,20 @@ describe('Amazon Buy Test', async () => {
                 expect(await amaPO.giftCardsHeader.getText()).toContain('Gift Cards & Top Up');                 
             })
         })
-
-
         it("All Tab's are correct", async () => {              
+            
+        })
+    })
+    describe("Buy a laptop", async() => {
+        beforeAll(async () => {
+            amaPO.findTextBox.sendKeys("lenovo carbon x1 laptop");
+            amaPO.findTextBox.sendKeys(protractor.Key.ENTER);
+        })
+        it("Laptop was buy successfuly", async() =>{
             browser.sleep(4000);
         })
     })
+
 
     it('Amazon site is work correctly', async () => {
 

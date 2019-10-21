@@ -23,4 +23,6 @@ export default class amazonPO{
 
     giftCards = this.fatherTab.element(by.cssContainingText('.nav-a  ', 'Gift Cards'));
     giftCardsHeader = element(by.css('.bxw-pageheader__title__text'));
+
+    findTextBox = element(by.id("twotabsearchtextbox"));
 }
